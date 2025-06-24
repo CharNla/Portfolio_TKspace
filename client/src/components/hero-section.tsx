@@ -115,13 +115,6 @@ export default function HeroSection() {
                   </motion.div>
 
                   {/* Floating Data Points */}
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-                    <div className="flex items-center space-x-2 bg-slate-900/80 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-xs text-slate-300 font-mono">ONLINE</span>
-                    </div>
-                  </div>
-
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
                     <div className="flex items-center space-x-2 bg-slate-900/80 backdrop-blur-sm border border-cyan-500/30 rounded-full px-4 py-2">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
