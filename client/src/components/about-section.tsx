@@ -30,7 +30,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-slate-900/50 backdrop-blur-sm relative mt-20">
+    <section id="about" className="py-20 bg-slate-900/50 backdrop-blur-sm relative mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
