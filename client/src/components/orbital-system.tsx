@@ -78,8 +78,7 @@ function OrbitalRing({ ring }: OrbitalRingProps) {
         height: `${height}px`,
         left: "50%",
         top: "50%",
-        marginLeft: `-${width / 2}px`,
-        marginTop: `-${height / 2}px`,
+        transform: `translate(-50%, -50%)`,
       }}
     />
   );
@@ -120,7 +119,7 @@ interface OrbitalSystemProps {
 
 export default function OrbitalSystem({ className = "" }: OrbitalSystemProps) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`absolute inset-0 ${className}`}>
       {/* Orbital Rings */}
       {ORBITAL_RINGS.map((ring) => (
         <OrbitalRing key={ring.id} ring={ring} />
