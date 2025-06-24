@@ -60,35 +60,32 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative w-80 h-80">
-              {/* Orbital System Container */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Main Profile Image */}
-                <div className="relative z-10">
-                  <motion.div
-                    animate={{ y: [-20, 0, -20] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
-                      alt="Char Nla - Computer Science Student"
-                      className="w-64 h-64 rounded-full object-cover shadow-2xl relative z-10"
-                      style={{
-                        background: 'linear-gradient(45deg, #8b5cf6, #ec4899, #3b82f6)',
-                        padding: '4px'
-                      }}
-                    />
-                    {/* Glowing border effect */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 animate-pulse">
-                      <div className="w-full h-full rounded-full bg-slate-900"></div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Orbital System */}
-                <OrbitalSystem />
+            <div className="relative w-80 h-80 mx-auto">
+              {/* Main Profile Image - Centered */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <motion.div
+                  animate={{ y: [-20, 0, -20] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="relative"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
+                    alt="Char Nla - Computer Science Student"
+                    className="w-64 h-64 rounded-full object-cover shadow-2xl relative z-10"
+                    style={{
+                      background: 'linear-gradient(45deg, #8b5cf6, #ec4899, #3b82f6)',
+                      padding: '4px'
+                    }}
+                  />
+                  {/* Glowing border effect */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 animate-pulse">
+                    <div className="w-full h-full rounded-full bg-slate-900"></div>
+                  </div>
+                </motion.div>
               </div>
+
+              {/* Orbital System - Centered with container */}
+              <OrbitalSystem />
             </div>
           </motion.div>
         </div>

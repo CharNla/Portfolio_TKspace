@@ -72,7 +72,7 @@ function OrbitalRing({ ring }: OrbitalRingProps) {
     <motion.div
       animate={{ rotate: rotation }}
       transition={{ duration, repeat: Infinity, ease: "linear" }}
-      className={`absolute border border-dashed ${borderColor} rounded-full`}
+      className={`absolute border border-dashed ${borderColor} rounded-full pointer-events-none`}
       style={{
         width: `${width}px`,
         height: `${height}px`,
@@ -90,18 +90,9 @@ interface PlanetProps {
 
 function Planet({ planet }: PlanetProps) {
   const { size, gradient, radius, duration, reverse, shadowColor, glowSize } = planet;
-  
-  const animationKeyframes = {
-    from: {
-      transform: `rotate(0deg) translateX(${radius}px) rotate(0deg)`,
-    },
-    to: {
-      transform: `rotate(${reverse ? -360 : 360}deg) translateX(${radius}px) rotate(${reverse ? 360 : -360}deg)`,
-    },
-  };
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
       <div
         className={`${size} bg-gradient-to-r ${gradient} rounded-full shadow-lg`}
         style={{
@@ -119,7 +110,7 @@ interface OrbitalSystemProps {
 
 export default function OrbitalSystem({ className = "" }: OrbitalSystemProps) {
   return (
-    <div className={`absolute inset-0 ${className}`}>
+    <div className={`absolute inset-0 pointer-events-none ${className}`}>
       {/* Orbital Rings */}
       {ORBITAL_RINGS.map((ring) => (
         <OrbitalRing key={ring.id} ring={ring} />
