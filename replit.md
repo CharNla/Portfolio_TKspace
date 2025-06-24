@@ -1,8 +1,8 @@
-# Portfolio Website - Replit.md
+# Char Nla Portfolio - Space Theme - Replit.md
 
 ## Overview
 
-This is a modern full-stack portfolio website built with React, TypeScript, and Express.js. The application features a Thai-language portfolio showcasing a computer science student's work, including projects, skills, and contact information. The site includes a contact form with backend data storage and a responsive design using Tailwind CSS and shadcn/ui components.
+This is a modern full-stack portfolio website built with React, TypeScript, and Express.js featuring a dark space theme with animated starfield background. The application showcases Char Nla, a 4th-year Computer Science student's work in English, including projects, skills, and contact information. The site includes a contact form with backend data storage and a responsive design using Tailwind CSS and shadcn/ui components with purple/pink accent colors and space-themed animations.
 
 ## System Architecture
 
@@ -96,8 +96,23 @@ The application is configured for deployment on Replit with the following setup:
 
 ## Changelog
 
-Changelog:
-- June 24, 2025. Initial setup
+## Recent Changes
+
+- June 24, 2025: Complete transformation to space theme with dark background
+  - Changed language from Thai to English throughout the application
+  - Updated name from "นักศึกษาปี 4" to "Char Nla"
+  - Implemented animated starfield background with twinkling stars and shooting stars
+  - Added nebula elements with floating animations
+  - Updated color scheme to dark theme with purple/pink/blue accents
+  - Redesigned all sections with space-themed styling and backdrop blur effects
+  - Updated navigation, hero, about, projects, skills, contact, and footer sections
+  - Modified contact form with dark theme styling
+  - Updated project descriptions and categories with space-themed names
+
+## Changelog
+
+- June 24, 2025: Initial Thai-language portfolio setup
+- June 24, 2025: Complete space theme transformation with English localization
 
 ## User Preferences
 

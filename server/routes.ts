@@ -9,9 +9,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
-      res.json({ success: true, message: "ข้อความของคุณถูกส่งแล้ว! ขอบคุณที่ติดต่อมา" });
+      res.json({ success: true, message: "Your message has been sent! Thank you for reaching out." });
     } catch (error) {
-      res.status(400).json({ success: false, message: "กรุณากรอกข้อมูลให้ครบถ้วน" });
+      res.status(400).json({ success: false, message: "Please fill in all required fields." });
     }
   });
 
@@ -21,7 +21,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const contacts = await storage.getContacts();
       res.json(contacts);
     } catch (error) {
-      res.status(500).json({ message: "เกิดข้อผิดพลาดในการดึงข้อมูล" });
+      res.status(500).json({ message: "An error occurred while fetching data." });
     }
   });
 

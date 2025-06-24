@@ -5,33 +5,33 @@ export default function AboutSection() {
   const experiences = [
     {
       icon: GraduationCap,
-      title: "ปริญญาตรี วิทยาการคอมพิวเตอร์",
-      company: "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (ปี 4)",
-      detail: "เกรดเฉลี่ย: 3.45",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600"
+      title: "Bachelor's in Computer Science",
+      company: "King Mongkut's University of Technology Thonburi (4th Year)",
+      detail: "GPA: 3.45",
+      bgColor: "bg-purple-900/30",
+      iconColor: "text-purple-400"
     },
     {
       icon: Code,
       title: "Front-end Developer Intern",
-      company: "บริษัท Digital Solutions Ltd. (ฝึกงาน 3 เดือน)",
-      detail: "พัฒนาเว็บแอปพลิเคชันด้วย React และ TypeScript",
-      bgColor: "bg-amber-100",
-      iconColor: "text-amber-600"
+      company: "Digital Solutions Ltd. (3-month internship)",
+      detail: "Developed web applications using React and TypeScript",
+      bgColor: "bg-pink-900/30",
+      iconColor: "text-pink-400"
     },
     {
       icon: Trophy,
-      title: "รางวัลโครงการ",
-      company: "รางวัลชนะเลิศ Hackathon 2023",
-      detail: "โครงการ Smart Campus Management System",
-      bgColor: "bg-green-100",
-      iconColor: "text-green-600"
+      title: "Project Award",
+      company: "First Place Winner - Hackathon 2023",
+      detail: "Smart Campus Management System project",
+      bgColor: "bg-blue-900/30",
+      iconColor: "text-blue-400"
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-slate-900/50 backdrop-blur-sm relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,9 +39,9 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">เกี่ยวกับฉัน</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            ฉันเป็นนักศึกษาปี 4 สาขาวิทยาการคอมพิวเตอร์ที่มีความสนใจในการพัฒนาเว็บแอปพลิเคชันและการออกแบบ UI/UX
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">About Me</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            I'm a 4th-year Computer Science student passionate about web development and UI/UX design, creating innovative digital solutions.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">การศึกษาและประสบการณ์</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Education & Experience</h3>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <motion.div
@@ -79,17 +79,17 @@ export default function AboutSection() {
                     <exp.icon className={`${exp.iconColor} text-xl`} size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">{exp.title}</h4>
-                    <p className="text-slate-600">{exp.company}</p>
-                    <p className="text-sm text-slate-500">{exp.detail}</p>
+                    <h4 className="font-semibold text-white mb-2">{exp.title}</h4>
+                    <p className="text-slate-300">{exp.company}</p>
+                    <p className="text-sm text-slate-400">{exp.detail}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
             <div className="mt-8">
-              <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+              <button className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200">
                 <Download className="mr-2" size={16} />
-                ดาวน์โหลด Resume
+                Download Resume
               </button>
             </div>
           </motion.div>

@@ -7,21 +7,21 @@ export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
-    { id: 'all', label: 'ทั้งหมด' },
-    { id: 'web', label: 'เว็บแอปพลิเคชัน' },
-    { id: 'mobile', label: 'มือถือ' },
+    { id: 'all', label: 'All Projects' },
+    { id: 'web', label: 'Web Apps' },
+    { id: 'mobile', label: 'Mobile Apps' },
     { id: 'design', label: 'UI/UX Design' },
   ];
 
   const projects = [
     {
       id: 1,
-      title: "ระบบจัดการร้านค้าออนไลน์",
-      description: "เว็บแอปพลิเคชันสำหรับจัดการร้านค้าออนไลน์ พร้อมระบบสั่งซื้อและจัดการสินค้า",
+      title: "E-Commerce Management System",
+      description: "Full-stack web application for online store management with order processing and inventory control features.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       category: "web",
-      categoryLabel: "เว็บแอปพลิเคชัน",
-      categoryColor: "text-blue-600 bg-blue-100",
+      categoryLabel: "Web Application",
+      categoryColor: "text-purple-400 bg-purple-900/30",
       technologies: ["React", "TypeScript", "Tailwind CSS"],
       links: [
         { icon: Github, url: "#" },
@@ -30,12 +30,12 @@ export default function ProjectsSection() {
     },
     {
       id: 2,
-      title: "แอปจัดการงาน TaskFlow",
-      description: "แอปพลิเคชันมือถือสำหรับจัดการงานและติดตามความคืบหน้าของโครงการ",
+      title: "TaskFlow Mobile App",
+      description: "Mobile application for task management and project progress tracking with real-time collaboration.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       category: "mobile",
-      categoryLabel: "แอปมือถือ",
-      categoryColor: "text-green-600 bg-green-100",
+      categoryLabel: "Mobile App",
+      categoryColor: "text-pink-400 bg-pink-900/30",
       technologies: ["React Native", "Firebase", "Redux"],
       links: [
         { icon: Github, url: "#" },
@@ -44,12 +44,12 @@ export default function ProjectsSection() {
     },
     {
       id: 3,
-      title: "Food Delivery App Design",
-      description: "การออกแบบ UI/UX สำหรับแอปพลิเคชันสั่งอาหารออนไลน์ที่ใช้งานง่ายและสวยงาม",
+      title: "Stellar Food Delivery App",
+      description: "UI/UX design for a modern food delivery application with intuitive user experience and cosmic theme.",
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       category: "design",
       categoryLabel: "UI/UX Design",
-      categoryColor: "text-purple-600 bg-purple-100",
+      categoryColor: "text-blue-400 bg-blue-900/30",
       technologies: ["Figma", "Adobe XD", "Prototyping"],
       links: [
         { icon: SiFigma, url: "#" },
@@ -58,12 +58,12 @@ export default function ProjectsSection() {
     },
     {
       id: 4,
-      title: "ระบบจัดการเรียนรู้ออนไลน์",
-      description: "แพลตฟอร์มสำหรับการเรียนรู้ออนไลน์ พร้อมระบบควิซและการติดตามผลการเรียน",
+      title: "Online Learning Platform",
+      description: "Educational platform with interactive quizzes, progress tracking, and multimedia content delivery.",
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       category: "web",
-      categoryLabel: "เว็บแอปพลิเคชัน",
-      categoryColor: "text-blue-600 bg-blue-100",
+      categoryLabel: "Web Application",
+      categoryColor: "text-purple-400 bg-purple-900/30",
       technologies: ["Vue.js", "Laravel", "MySQL"],
       links: [
         { icon: Github, url: "#" },
@@ -72,12 +72,12 @@ export default function ProjectsSection() {
     },
     {
       id: 5,
-      title: "แอปติดตามสุขภาพ FitTracker",
-      description: "แอปพลิเคชันสำหรับติดตามการออกกำลังกายและสุขภาพส่วนบุคคล",
+      title: "Cosmic FitTracker",
+      description: "Health and fitness tracking application with personalized workout plans and progress analytics.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       category: "mobile",
-      categoryLabel: "แอปมือถือ",
-      categoryColor: "text-green-600 bg-green-100",
+      categoryLabel: "Mobile App",
+      categoryColor: "text-pink-400 bg-pink-900/30",
       technologies: ["Flutter", "Dart", "SQLite"],
       links: [
         { icon: Github, url: "#" },
@@ -86,12 +86,12 @@ export default function ProjectsSection() {
     },
     {
       id: 6,
-      title: "Brand Identity Design",
-      description: "การออกแบบตัวตนแบรนด์และระบบการสื่อสารสำหรับธุรกิจสตาร์ทอัพ",
+      title: "Nebula Brand Identity",
+      description: "Complete brand identity design and communication system for a space technology startup.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500",
       category: "design",
       categoryLabel: "UI/UX Design",
-      categoryColor: "text-purple-600 bg-purple-100",
+      categoryColor: "text-blue-400 bg-blue-900/30",
       technologies: ["Illustrator", "Photoshop", "Branding"],
       links: [
         { icon: SiBehance, url: "#" },
@@ -105,8 +105,8 @@ export default function ProjectsSection() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 bg-slate-800/30 backdrop-blur-sm relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,9 +114,9 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">ผลงานของฉัน</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            รวมผลงานโครงการที่ฉันได้พัฒนาขึ้นระหว่างการศึกษาและฝึกงาน
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">My Projects</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+            A collection of projects I've developed during my studies and internship experiences.
           </p>
           
           {/* Project Filter */}
@@ -127,8 +127,8 @@ export default function ProjectsSection() {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                   activeFilter === filter.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-slate-700 hover:bg-blue-50'
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                    : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-purple-500/30'
                 }`}
               >
                 {filter.label}
@@ -147,7 +147,7 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 border border-purple-500/20"
             >
               <img
                 src={project.image}
@@ -164,20 +164,20 @@ export default function ProjectsSection() {
                       <a
                         key={linkIndex}
                         href={link.url}
-                        className="text-slate-400 hover:text-blue-600 transition-colors duration-200"
+                        className="text-slate-400 hover:text-purple-400 transition-colors duration-200"
                       >
                         <link.icon size={16} />
                       </a>
                     ))}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                <p className="text-slate-600 mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-slate-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded"
+                      className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded border border-purple-500/20"
                     >
                       {tech}
                     </span>

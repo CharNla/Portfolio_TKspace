@@ -34,15 +34,15 @@ export default function ContactSection() {
     },
     onSuccess: (data) => {
       toast({
-        title: "ส่งข้อความสำเร็จ!",
+        title: "Message sent successfully!",
         description: data.message,
       });
       form.reset();
     },
     onError: () => {
       toast({
-        title: "เกิดข้อผิดพลาด",
-        description: "กรุณาลองใหม่อีกครั้ง",
+        title: "Error occurred",
+        description: "Please try again",
         variant: "destructive",
       });
     },
@@ -55,44 +55,44 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      title: "อีเมล",
-      value: "student@university.ac.th",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600"
+      title: "Email",
+      value: "char.nla@university.ac.th",
+      bgColor: "bg-purple-900/30",
+      iconColor: "text-purple-400"
     },
     {
       icon: Phone,
-      title: "โทรศัพท์",
+      title: "Phone",
       value: "+66 98 765 4321",
-      bgColor: "bg-green-100",
-      iconColor: "text-green-600"
+      bgColor: "bg-pink-900/30",
+      iconColor: "text-pink-400"
     },
     {
       icon: MapPin,
-      title: "ที่อยู่",
-      value: "กรุงเทพมหานคร, ประเทศไทย",
-      bgColor: "bg-purple-100",
-      iconColor: "text-purple-600"
+      title: "Location",
+      value: "Bangkok, Thailand",
+      bgColor: "bg-blue-900/30",
+      iconColor: "text-blue-400"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "linkedin.com/in/student-profile",
-      bgColor: "bg-amber-100",
-      iconColor: "text-amber-600"
+      value: "linkedin.com/in/char-nla",
+      bgColor: "bg-cyan-900/30",
+      iconColor: "text-cyan-400"
     }
   ];
 
   const socialLinks = [
-    { icon: Github, url: "#", bgColor: "bg-slate-800", hoverColor: "hover:bg-slate-700" },
-    { icon: Linkedin, url: "#", bgColor: "bg-blue-600", hoverColor: "hover:bg-blue-700" },
+    { icon: Github, url: "#", bgColor: "bg-slate-700", hoverColor: "hover:bg-slate-600" },
+    { icon: Linkedin, url: "#", bgColor: "bg-purple-600", hoverColor: "hover:bg-purple-700" },
     { icon: Instagram, url: "#", bgColor: "bg-pink-600", hoverColor: "hover:bg-pink-700" },
-    { icon: Facebook, url: "#", bgColor: "bg-blue-500", hoverColor: "hover:bg-blue-600" },
+    { icon: Facebook, url: "#", bgColor: "bg-blue-600", hoverColor: "hover:bg-blue-700" },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-slate-800/30 backdrop-blur-sm relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,9 +100,9 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">ติดต่อฉัน</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            หากคุณสนใจในผลงานของฉันหรือต้องการร่วมงานกัน กรุณาติดต่อมาได้เลย!
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Contact Me</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Interested in my work or want to collaborate? Feel free to reach out!
           </p>
         </motion.div>
 
@@ -114,7 +114,7 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-8">ข้อมูลติดต่อ</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -129,15 +129,15 @@ export default function ContactSection() {
                     <info.icon className={`${info.iconColor} text-xl`} size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900">{info.title}</h4>
-                    <p className="text-slate-600">{info.value}</p>
+                    <h4 className="font-semibold text-white">{info.title}</h4>
+                    <p className="text-slate-300">{info.value}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
             <div className="mt-8">
-              <h4 className="font-semibold text-slate-900 mb-4">ติดตามฉันได้ที่</h4>
+              <h4 className="font-semibold text-white mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -161,8 +161,8 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">ส่งข้อความหาฉัน</h3>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-purple-500/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -171,9 +171,9 @@ export default function ContactSection() {
                       name="firstName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>ชื่อ</FormLabel>
+                          <FormLabel className="text-slate-300">First Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="ชื่อของคุณ" {...field} />
+                            <Input placeholder="Your first name" className="bg-slate-700/50 border-purple-500/30 text-white placeholder:text-slate-400" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -184,9 +184,9 @@ export default function ContactSection() {
                       name="lastName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>นามสกุล</FormLabel>
+                          <FormLabel className="text-slate-300">Last Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="นามสกุลของคุณ" {...field} />
+                            <Input placeholder="Your last name" className="bg-slate-700/50 border-purple-500/30 text-white placeholder:text-slate-400" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -198,9 +198,9 @@ export default function ContactSection() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>อีเมล</FormLabel>
+                        <FormLabel className="text-slate-300">Email</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="your.email@example.com" {...field} />
+                          <Input type="email" placeholder="your.email@example.com" className="bg-slate-700/50 border-purple-500/30 text-white placeholder:text-slate-400" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -211,9 +211,9 @@ export default function ContactSection() {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>หัวข้อ</FormLabel>
+                        <FormLabel className="text-slate-300">Subject</FormLabel>
                         <FormControl>
-                          <Input placeholder="หัวข้อข้อความ" {...field} />
+                          <Input placeholder="Message subject" className="bg-slate-700/50 border-purple-500/30 text-white placeholder:text-slate-400" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -224,11 +224,11 @@ export default function ContactSection() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>ข้อความ</FormLabel>
+                        <FormLabel className="text-slate-300">Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="เขียนข้อความของคุณที่นี่..."
-                            className="resize-none"
+                            placeholder="Write your message here..."
+                            className="resize-none bg-slate-700/50 border-purple-500/30 text-white placeholder:text-slate-400"
                             rows={5}
                             {...field}
                           />
@@ -239,10 +239,10 @@ export default function ContactSection() {
                   />
                   <Button
                     type="submit"
-                    className="w-full"
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                     disabled={contactMutation.isPending}
                   >
-                    {contactMutation.isPending ? "กำลังส่ง..." : "ส่งข้อความ"}
+                    {contactMutation.isPending ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </Form>
