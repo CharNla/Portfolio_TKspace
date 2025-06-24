@@ -10,15 +10,16 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "char.nla@university.ac.th" },
-    { icon: Phone, text: "+66 98 765 4321" },
-    { icon: MapPin, text: "Bangkok, Thailand" },
+    { icon: Mail, text: "mamm0n715120@gmail.com" },
+    { icon: Phone, text: "+66 98 669 1718" },
+    { icon: MapPin, text: "KhonKean, Thailand" },
+    { icon: Linkedin, text: "linkedin.com/in/char-nla" },
   ];
 
   const stats = [
-    { icon: Code2, number: "50+", label: "Projects Completed" },
-    { icon: Rocket, number: "3+", label: "Years Experience" },
-    { icon: Star, number: "15+", label: "Technologies Mastered" },
+    { icon: Code2, number: "6+", label: "Projects Completed" },
+    { icon: Rocket, number: "1+", label: "Years Experience" },
+    { icon: Star, number: "7+", label: "Technologies Mastered" },
   ];
 
   return (
@@ -81,13 +82,13 @@ export default function Footer() {
           </motion.div>
 
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             {/* About Section */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-1"
+              className="text-center mx-auto"
             >
               <h3 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 Char Nla
@@ -95,7 +96,7 @@ export default function Footer() {
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Building the future through code. Passionate about creating innovative solutions that bridge technology and human experience in the digital cosmos.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex justify-center space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
@@ -113,36 +114,12 @@ export default function Footer() {
               </div>
             </motion.div>
 
-            {/* Contact Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-1"
-            >
-              <h3 className="text-xl font-bold mb-6 text-white">Get In Touch</h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ x: 5 }}
-                    className="flex items-center p-3 rounded-lg bg-slate-800/30 border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300"
-                  >
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 mr-4">
-                      <info.icon size={16} className="text-purple-400" />
-                    </div>
-                    <span className="text-slate-300">{info.text}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="lg:col-span-1"
+              className="text-center mx-auto"
             >
               <h3 className="text-xl font-bold mb-6 text-white">Let's Collaborate</h3>
               <p className="text-slate-400 mb-6">
@@ -151,7 +128,7 @@ export default function Footer() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+                className="w-full max-w-xs bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 mx-auto"
               >
                 Start a Project
               </motion.button>

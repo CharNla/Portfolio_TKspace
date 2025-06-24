@@ -56,21 +56,21 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "char.nla@university.ac.th",
+      value: "mamm0n715120@gmail.com",
       bgColor: "bg-purple-900/30",
       iconColor: "text-purple-400"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+66 98 765 4321",
+      value: "+66 98 669 1718",
       bgColor: "bg-pink-900/30",
       iconColor: "text-pink-400"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Bangkok, Thailand",
+      value: "KhonKean, Thailand",
       bgColor: "bg-blue-900/30",
       iconColor: "text-blue-400"
     },

@@ -6,26 +6,18 @@ export default function AboutSection() {
     {
       icon: GraduationCap,
       title: "Bachelor's in Computer Science",
-      company: "King Mongkut's University of Technology Thonburi (4th Year)",
-      detail: "GPA: 3.45",
+      company: "Khon Kaen University (4th Year)",
+      detail: "GPA: 2.64",
       bgColor: "bg-purple-900/30",
       iconColor: "text-purple-400"
     },
     {
       icon: Code,
       title: "Front-end Developer Intern",
-      company: "Digital Solutions Ltd. (3-month internship)",
-      detail: "Developed web applications using React and TypeScript",
+      company: "ApexcapableTech (2-month internship)",
+      detail: "Developed web applications using React and JavaScript",
       bgColor: "bg-pink-900/30",
       iconColor: "text-pink-400"
-    },
-    {
-      icon: Trophy,
-      title: "Project Award",
-      company: "First Place Winner - Hackathon 2023",
-      detail: "Smart Campus Management System project",
-      bgColor: "bg-blue-900/30",
-      iconColor: "text-blue-400"
     }
   ];
 

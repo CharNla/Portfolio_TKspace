@@ -76,7 +76,7 @@ export const PORTFOLIO_CONTENT = {
   personal: {
     name: 'Char Nla',
     title: '4th-year Computer Science Student',
-    description: 'A passionate 4th-year Computer Science student specializing in full-stack web development and UI/UX design, creating beautiful and functional digital experiences.',
+    description: 'A passionate 4th-year Computer Science student specializing in frontend development and UI/UX design, creating beautiful and functional digital experiences.',
   },
   social: {
     github: '#',
