@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
 import { Github, Linkedin, Instagram, Facebook } from "lucide-react";
+import OrbitalSystem from "./orbital-system";
+import SpaceButton from "./ui/space-button";
+import { PORTFOLIO_CONTENT } from "@/lib/space-theme-config";
 
 export default function HeroSection() {
   return (
@@ -16,37 +19,37 @@ export default function HeroSection() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Hello! I'm
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                {" "}Char Nla
+                {" "}{PORTFOLIO_CONTENT.personal.name}
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              A passionate 4th-year Computer Science student specializing in full-stack web development and UI/UX design, creating beautiful and functional digital experiences.
+              {PORTFOLIO_CONTENT.personal.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
+              <SpaceButton
                 onClick={() => scrollToSection('projects')}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-purple-500/25"
+                variant="primary"
               >
                 View Projects
-              </button>
-              <button
+              </SpaceButton>
+              <SpaceButton
                 onClick={() => scrollToSection('contact')}
-                className="border-2 border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-200"
+                variant="secondary"
               >
                 Contact Me
-              </button>
+              </SpaceButton>
             </div>
             <div className="flex justify-center lg:justify-start space-x-6 mt-8">
-              <a href="#" className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
+              <a href={PORTFOLIO_CONTENT.social.github} className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
                 <Github size={24} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
+              <a href={PORTFOLIO_CONTENT.social.linkedin} className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
+              <a href={PORTFOLIO_CONTENT.social.instagram} className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
                 <Instagram size={24} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
+              <a href={PORTFOLIO_CONTENT.social.facebook} className="text-slate-400 hover:text-purple-400 transform hover:scale-110 transition-all duration-200">
                 <Facebook size={24} />
               </a>
             </div>
@@ -83,78 +86,8 @@ export default function HeroSection() {
                   </motion.div>
                 </div>
 
-                {/* Orbiting Planets */}
-                {/* Planet 1 - Large Purple (Outer ring) */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div 
-                    className="w-4 h-4 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full shadow-lg"
-                    style={{
-                      animation: 'orbit 30s linear infinite',
-                      boxShadow: '0 0 15px rgba(147, 51, 234, 0.6)'
-                    }}
-                  />
-                </div>
-
-                {/* Planet 2 - Medium Pink (Inner ring - reverse) */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div 
-                    className="w-3 h-3 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full shadow-lg"
-                    style={{
-                      animation: 'orbit-reverse 20s linear infinite',
-                      boxShadow: '0 0 12px rgba(236, 72, 153, 0.6)'
-                    }}
-                  />
-                </div>
-
-                {/* Planet 3 - Small Blue (Outer ring with purple) */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div 
-                    className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg"
-                    style={{
-                      animation: 'orbit 25s linear infinite',
-                      boxShadow: '0 0 10px rgba(59, 130, 246, 0.6)'
-                    }}
-                  />
-                </div>
-
-                {/* Planet 4 - Tiny Cyan (Inner orbit) */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div 
-                    className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full shadow-lg"
-                    style={{
-                      animation: 'orbit-tiny 10s linear infinite',
-                      boxShadow: '0 0 8px rgba(34, 211, 238, 0.6)'
-                    }}
-                  />
-                </div>
-
-                {/* Orbital Rings */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  className="absolute border border-dashed border-purple-500/20 rounded-full"
-                  style={{ 
-                    width: '400px', 
-                    height: '400px', 
-                    left: '50%', 
-                    top: '50%',
-                    marginLeft: '-200px',
-                    marginTop: '-200px'
-                  }}
-                />
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute border border-dashed border-pink-500/20 rounded-full"
-                  style={{ 
-                    width: '320px', 
-                    height: '320px', 
-                    left: '50%', 
-                    top: '50%',
-                    marginLeft: '-160px',
-                    marginTop: '-160px'
-                  }}
-                />
+                {/* Orbital System */}
+                <OrbitalSystem />
               </div>
             </div>
           </motion.div>
