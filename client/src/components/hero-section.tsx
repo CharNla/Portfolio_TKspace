@@ -84,46 +84,45 @@ export default function HeroSection() {
                 </div>
 
                 {/* Orbiting Planets */}
-                {/* Planet 1 - Large Purple */}
+                {/* Planet 1 - Large Purple (Outer ring) */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div 
                     className="w-4 h-4 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full shadow-lg"
                     style={{
-                      animation: 'orbit 12s linear infinite',
+                      animation: 'orbit 30s linear infinite',
                       boxShadow: '0 0 15px rgba(147, 51, 234, 0.6)'
                     }}
                   />
                 </div>
 
-                {/* Planet 2 - Medium Pink (Reverse orbit) */}
+                {/* Planet 2 - Medium Pink (Inner ring - reverse) */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div 
                     className="w-3 h-3 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full shadow-lg"
                     style={{
-                      animation: 'orbit-reverse 8s linear infinite',
+                      animation: 'orbit-reverse 20s linear infinite',
                       boxShadow: '0 0 12px rgba(236, 72, 153, 0.6)'
                     }}
                   />
                 </div>
 
-                {/* Planet 3 - Small Blue */}
+                {/* Planet 3 - Small Blue (Middle orbit) */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div 
                     className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg"
                     style={{
-                      animation: 'orbit-small 6s linear infinite',
+                      animation: 'orbit-small 15s linear infinite',
                       boxShadow: '0 0 10px rgba(59, 130, 246, 0.6)'
                     }}
                   />
                 </div>
 
-                {/* Planet 4 - Tiny Cyan */}
+                {/* Planet 4 - Tiny Cyan (Inner orbit) */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div 
                     className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full shadow-lg"
                     style={{
-                      animation: 'orbit 15s linear infinite reverse',
-                      transform: 'rotate(0deg) translateX(110px) rotate(0deg)',
+                      animation: 'orbit-tiny 10s linear infinite',
                       boxShadow: '0 0 8px rgba(34, 211, 238, 0.6)'
                     }}
                   />
