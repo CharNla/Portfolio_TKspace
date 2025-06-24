@@ -3,21 +3,21 @@ import { Users, Lightbulb, MessageCircle, Clock } from "lucide-react";
 
 export default function SkillsSection() {
   const technicalSkills = [
-    { name: "JavaScript / TypeScript", level: 90, color: "from-blue-500 to-blue-600" },
-    { name: "React / Next.js", level: 85, color: "from-cyan-500 to-cyan-600" },
-    { name: "Vue.js", level: 80, color: "from-green-500 to-green-600" },
-    { name: "Node.js / Express", level: 75, color: "from-emerald-500 to-emerald-600" },
-    { name: "Python / Django", level: 70, color: "from-yellow-500 to-yellow-600" },
-    { name: "Database (MySQL, MongoDB)", level: 75, color: "from-orange-500 to-orange-600" },
+    { name: "JavaScript / TypeScript", level: "Expert", levelPercent: 90, color: "from-blue-500 to-blue-600" },
+    { name: "React / Next.js", level: "Advanced", levelPercent: 85, color: "from-cyan-500 to-cyan-600" },
+    { name: "Vue.js", level: "Advanced", levelPercent: 80, color: "from-green-500 to-green-600" },
+    { name: "Node.js / Express", level: "Intermediate", levelPercent: 75, color: "from-emerald-500 to-emerald-600" },
+    { name: "Python / Django", level: "Intermediate", levelPercent: 70, color: "from-yellow-500 to-yellow-600" },
+    { name: "Database (MySQL, MongoDB)", level: "Intermediate", levelPercent: 75, color: "from-orange-500 to-orange-600" },
   ];
 
   const designSkills = [
-    { name: "UI/UX Design", level: 85, color: "from-purple-500 to-purple-600" },
-    { name: "Figma / Adobe XD", level: 90, color: "from-pink-500 to-pink-600" },
-    { name: "Photoshop / Illustrator", level: 75, color: "from-indigo-500 to-indigo-600" },
-    { name: "Git / GitHub", level: 80, color: "from-slate-500 to-slate-600" },
-    { name: "Docker / AWS", level: 65, color: "from-teal-500 to-teal-600" },
-    { name: "Agile / Scrum", level: 70, color: "from-red-500 to-red-600" },
+    { name: "UI/UX Design", level: "Advanced", levelPercent: 85, color: "from-purple-500 to-purple-600" },
+    { name: "Figma / Adobe XD", level: "Expert", levelPercent: 90, color: "from-pink-500 to-pink-600" },
+    { name: "Photoshop / Illustrator", level: "Intermediate", levelPercent: 75, color: "from-indigo-500 to-indigo-600" },
+    { name: "Git / GitHub", level: "Advanced", levelPercent: 80, color: "from-slate-500 to-slate-600" },
+    { name: "Docker / AWS", level: "Beginner", levelPercent: 65, color: "from-teal-500 to-teal-600" },
+    { name: "Agile / Scrum", level: "Intermediate", levelPercent: 70, color: "from-red-500 to-red-600" },
   ];
 
   const softSkills = [
@@ -84,12 +84,12 @@ export default function SkillsSection() {
                 >
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-semibold text-white">{skill.name}</span>
-                    <span className="text-sm text-slate-300">{skill.level}%</span>
+                    <span className="text-sm text-slate-300 font-medium">{skill.level}</span>
                   </div>
                   <div className="w-full bg-slate-700/50 rounded-full h-3">
                     <motion.div
                       initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
+                      whileInView={{ width: `${skill.levelPercent}%` }}
                       transition={{ duration: 1.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-gradient-to-r ${skill.color} h-3 rounded-full`}
@@ -120,12 +120,12 @@ export default function SkillsSection() {
                 >
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-semibold text-white">{skill.name}</span>
-                    <span className="text-sm text-slate-300">{skill.level}%</span>
+                    <span className="text-sm text-slate-300 font-medium">{skill.level}</span>
                   </div>
                   <div className="w-full bg-slate-700/50 rounded-full h-3">
                     <motion.div
                       initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
+                      whileInView={{ width: `${skill.levelPercent}%` }}
                       transition={{ duration: 1.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-gradient-to-r ${skill.color} h-3 rounded-full`}
