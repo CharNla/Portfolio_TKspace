@@ -62,7 +62,7 @@ export default function HeroSection() {
           >
             <div className="relative w-80 h-80 mx-auto">
               {/* Main Profile Image - Centered */}
-              <div className="absolute inset-0 flex items-center justify-center z-10">
+              <div className="absolute inset-0 flex items-center justify-center z-10 relative">
                 <motion.div
                   animate={{ y: [-20, 0, -20] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}

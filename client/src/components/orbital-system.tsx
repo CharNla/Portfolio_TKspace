@@ -72,7 +72,7 @@ function OrbitalRing({ ring }: OrbitalRingProps) {
     <motion.div
       animate={{ rotate: rotation }}
       transition={{ duration, repeat: Infinity, ease: "linear" }}
-      className={`absolute border border-dashed ${borderColor} rounded-full pointer-events-none`}
+      className={`absolute border border-dashed ${borderColor} rounded-full pointer-events-none -z-10`}
       style={{
         width: `${width}px`,
         height: `${height}px`,
@@ -111,15 +111,19 @@ interface OrbitalSystemProps {
 export default function OrbitalSystem({ className = "" }: OrbitalSystemProps) {
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
-      {/* Orbital Rings */}
-      {ORBITAL_RINGS.map((ring) => (
-        <OrbitalRing key={ring.id} ring={ring} />
-      ))}
+      {/* Orbital Rings - Behind profile */}
+      <div className="absolute inset-0 -z-10">
+        {ORBITAL_RINGS.map((ring) => (
+          <OrbitalRing key={ring.id} ring={ring} />
+        ))}
+      </div>
       
-      {/* Orbiting Planets */}
-      {PLANETS.map((planet) => (
-        <Planet key={planet.id} planet={planet} />
-      ))}
+      {/* Orbiting Planets - In front of profile */}
+      <div className="absolute inset-0 z-20">
+        {PLANETS.map((planet) => (
+          <Planet key={planet.id} planet={planet} />
+        ))}
+      </div>
     </div>
   );
 }
