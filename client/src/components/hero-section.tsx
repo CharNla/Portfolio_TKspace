@@ -106,12 +106,12 @@ export default function HeroSection() {
                   />
                 </div>
 
-                {/* Planet 3 - Small Blue (Middle orbit) */}
+                {/* Planet 3 - Small Blue (Outer ring with purple) */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div 
                     className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg"
                     style={{
-                      animation: 'orbit-small 15s linear infinite',
+                      animation: 'orbit 25s linear infinite',
                       boxShadow: '0 0 10px rgba(59, 130, 246, 0.6)'
                     }}
                   />
