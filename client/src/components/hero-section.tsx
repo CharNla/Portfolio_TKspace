@@ -57,29 +57,92 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              <motion.img
-                animate={{ y: [-20, 0, -20] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
-                alt="Char Nla - Computer Science Student"
-                className="w-80 h-80 rounded-full object-cover shadow-2xl border-4 border-purple-500/50"
-              />
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-8 h-8 bg-purple-400 rounded-full shadow-lg shadow-purple-400/50"
-              />
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full shadow-lg shadow-pink-400/50"
-              />
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-4 border-2 border-dashed border-purple-500/30 rounded-full"
-              />
+            <div className="relative w-80 h-80">
+              {/* Orbital System Container */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* Main Profile Image */}
+                <div className="relative z-10">
+                  <motion.div
+                    animate={{ y: [-20, 0, -20] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
+                      alt="Char Nla - Computer Science Student"
+                      className="w-64 h-64 rounded-full object-cover shadow-2xl relative z-10"
+                      style={{
+                        background: 'linear-gradient(45deg, #8b5cf6, #ec4899, #3b82f6)',
+                        padding: '4px'
+                      }}
+                    />
+                    {/* Glowing border effect */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 animate-pulse">
+                      <div className="w-full h-full rounded-full bg-slate-900"></div>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Orbiting Planets */}
+                {/* Planet 1 - Large Purple */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div 
+                    className="w-4 h-4 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full shadow-lg"
+                    style={{
+                      animation: 'orbit 12s linear infinite',
+                      boxShadow: '0 0 15px rgba(147, 51, 234, 0.6)'
+                    }}
+                  />
+                </div>
+
+                {/* Planet 2 - Medium Pink (Reverse orbit) */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div 
+                    className="w-3 h-3 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full shadow-lg"
+                    style={{
+                      animation: 'orbit-reverse 8s linear infinite',
+                      boxShadow: '0 0 12px rgba(236, 72, 153, 0.6)'
+                    }}
+                  />
+                </div>
+
+                {/* Planet 3 - Small Blue */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div 
+                    className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg"
+                    style={{
+                      animation: 'orbit-small 6s linear infinite',
+                      boxShadow: '0 0 10px rgba(59, 130, 246, 0.6)'
+                    }}
+                  />
+                </div>
+
+                {/* Planet 4 - Tiny Cyan */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div 
+                    className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full shadow-lg"
+                    style={{
+                      animation: 'orbit 15s linear infinite reverse',
+                      transform: 'rotate(0deg) translateX(110px) rotate(0deg)',
+                      boxShadow: '0 0 8px rgba(34, 211, 238, 0.6)'
+                    }}
+                  />
+                </div>
+
+                {/* Orbital Rings */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 border border-dashed border-purple-500/20 rounded-full"
+                  style={{ width: '400px', height: '400px', left: '-60px', top: '-60px' }}
+                />
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 border border-dashed border-pink-500/20 rounded-full"
+                  style={{ width: '320px', height: '320px', left: '-20px', top: '-20px' }}
+                />
+              </div>
             </div>
           </motion.div>
         </div>

@@ -87,10 +87,74 @@ export default function AboutSection() {
               ))}
             </div>
             <div className="mt-8">
-              <button className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200">
-                <Download className="mr-2" size={16} />
-                Download Resume
-              </button>
+              <motion.button 
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: '0 10px 30px rgba(147, 51, 234, 0.3)'
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:from-purple-700 hover:to-pink-700"
+              >
+                {/* Animated background effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={false}
+                />
+                
+                {/* Content */}
+                <div className="relative flex items-center">
+                  <motion.div
+                    animate={{ 
+                      y: [0, -2, 0],
+                      rotate: [0, 5, 0]
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="mr-3"
+                  >
+                    <Download size={20} />
+                  </motion.div>
+                  <span className="text-sm font-bold tracking-wide">Download Resume</span>
+                  
+                  {/* Hover effect particles */}
+                  <motion.div
+                    className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100"
+                    animate={{
+                      scale: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: 0.2
+                    }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-yellow-300 rounded-full opacity-0 group-hover:opacity-100"
+                    animate={{
+                      scale: [0, 1, 0],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: 0.6
+                    }}
+                  />
+                </div>
+                
+                {/* Border glow effect */}
+                <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                     style={{ 
+                       background: 'linear-gradient(45deg, transparent, transparent), linear-gradient(45deg, #8b5cf6, #ec4899)',
+                       backgroundClip: 'padding-box, border-box',
+                       backgroundOrigin: 'padding-box, border-box'
+                     }} 
+                />
+              </motion.button>
             </div>
           </motion.div>
         </div>
