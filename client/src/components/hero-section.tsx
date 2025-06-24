@@ -3,6 +3,7 @@ import { scrollToSection } from "@/lib/utils";
 import { Github, Linkedin, Instagram, Facebook } from "lucide-react";
 import SpaceButton from "./ui/space-button";
 import { PORTFOLIO_CONTENT } from "@/lib/space-theme-config";
+import profileImg from "@/assets/profile.jpg";
 
 export default function HeroSection() {
   return (
@@ -98,8 +99,8 @@ export default function HeroSection() {
                     
                     {/* Main Profile Image */}
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
-                      alt="Char Nla - Computer Science Student"
+                      src={profileImg}
+                      alt="Profile"
                       className="w-full h-full rounded-full object-cover shadow-2xl border-4 border-slate-800/50"
                     />
 
