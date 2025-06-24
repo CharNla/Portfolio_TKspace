@@ -30,7 +30,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-slate-900/50 backdrop-blur-sm relative">
+    <section id="about" className="py-32 bg-slate-900/50 backdrop-blur-sm relative mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -93,16 +93,16 @@ export default function AboutSection() {
                   boxShadow: '0 10px 30px rgba(147, 51, 234, 0.3)'
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:from-purple-700 hover:to-pink-700"
+                className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300"
               >
                 {/* Animated background effect */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                   initial={false}
                 />
                 
-                {/* Content */}
-                <div className="relative flex items-center">
+                {/* Content - Always visible with z-index */}
+                <div className="relative flex items-center z-10">
                   <motion.div
                     animate={{ 
                       y: [0, -2, 0],
@@ -117,7 +117,7 @@ export default function AboutSection() {
                   >
                     <Download size={20} />
                   </motion.div>
-                  <span className="text-sm font-bold tracking-wide">Download Resume</span>
+                  <span className="text-sm font-bold tracking-wide relative z-10">Download Resume</span>
                   
                   {/* Hover effect particles */}
                   <motion.div
@@ -145,15 +145,6 @@ export default function AboutSection() {
                     }}
                   />
                 </div>
-                
-                {/* Border glow effect */}
-                <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
-                     style={{ 
-                       background: 'linear-gradient(45deg, transparent, transparent), linear-gradient(45deg, #8b5cf6, #ec4899)',
-                       backgroundClip: 'padding-box, border-box',
-                       backgroundOrigin: 'padding-box, border-box'
-                     }} 
-                />
               </motion.button>
             </div>
           </motion.div>
