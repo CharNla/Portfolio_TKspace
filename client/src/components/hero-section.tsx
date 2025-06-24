@@ -4,7 +4,7 @@ import { Github, Linkedin, Instagram, Facebook } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
