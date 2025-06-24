@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
 import { Github, Linkedin, Instagram, Facebook } from "lucide-react";
-import OrbitalSystem from "./orbital-system";
 import SpaceButton from "./ui/space-button";
 import { PORTFOLIO_CONTENT } from "@/lib/space-theme-config";
 
@@ -60,32 +59,85 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative w-80 h-80 mx-auto">
-              {/* Main Profile Image - Centered */}
-              <div className="absolute inset-0 flex items-center justify-center z-10 relative">
-                <motion.div
-                  animate={{ y: [-20, 0, -20] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
-                    alt="Char Nla - Computer Science Student"
-                    className="w-64 h-64 rounded-full object-cover shadow-2xl relative z-10"
-                    style={{
-                      background: 'linear-gradient(45deg, #8b5cf6, #ec4899, #3b82f6)',
-                      padding: '4px'
-                    }}
-                  />
-                  {/* Glowing border effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 animate-pulse">
-                    <div className="w-full h-full rounded-full bg-slate-900"></div>
-                  </div>
-                </motion.div>
-              </div>
+            <div className="relative flex items-center justify-center">
+              {/* Premium Space Profile Container */}
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="relative group"
+              >
+                {/* Outer Holographic Ring */}
+                <div className="absolute -inset-8 rounded-full bg-gradient-to-r from-purple-600/20 via-pink-500/20 via-blue-500/20 to-cyan-400/20 blur-xl animate-pulse"></div>
+                
+                {/* Secondary Glow Ring */}
+                <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-500/30 via-pink-400/30 to-blue-400/30 blur-lg animate-pulse"></div>
 
-              {/* Orbital System - Centered with container */}
-              <OrbitalSystem />
+                {/* Main Profile Frame */}
+                <div className="relative">
+                  {/* Hexagonal Tech Border */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full p-0.5 animate-spin-slow">
+                    <div className="w-full h-full bg-slate-900 rounded-full"></div>
+                  </div>
+
+                  {/* Profile Image Container */}
+                  <motion.div
+                    animate={{ 
+                      y: [-10, 10, -10],
+                      rotateY: [0, 5, 0, -5, 0]
+                    }}
+                    transition={{ 
+                      duration: 8, 
+                      repeat: Infinity, 
+                      ease: "easeInOut" 
+                    }}
+                    className="relative w-80 h-80"
+                  >
+                    {/* Holographic Overlay */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent via-white/5 to-transparent pointer-events-none"></div>
+                    
+                    {/* Main Profile Image */}
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500"
+                      alt="Char Nla - Computer Science Student"
+                      className="w-full h-full rounded-full object-cover shadow-2xl border-4 border-slate-800/50"
+                    />
+
+                    {/* Scanning Line Effect */}
+                    <div className="absolute inset-0 rounded-full overflow-hidden">
+                      <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/80 to-transparent animate-scan"></div>
+                    </div>
+
+                    {/* Corner Tech Details */}
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full border-2 border-slate-900 animate-pulse"></div>
+                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full border-2 border-slate-900 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute top-8 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+                  </motion.div>
+
+                  {/* Floating Data Points */}
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                    <div className="flex items-center space-x-2 bg-slate-900/80 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-slate-300 font-mono">ONLINE</span>
+                    </div>
+                  </div>
+
+                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
+                    <div className="flex items-center space-x-2 bg-slate-900/80 backdrop-blur-sm border border-cyan-500/30 rounded-full px-4 py-2">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-slate-300 font-mono">CS STUDENT</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Ambient Particles */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute top-1/4 -left-8 w-1 h-1 bg-purple-400 rounded-full animate-float"></div>
+                  <div className="absolute top-3/4 -right-6 w-1 h-1 bg-pink-400 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+                  <div className="absolute bottom-1/4 -left-6 w-1 h-1 bg-blue-400 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+                  <div className="absolute top-1/2 right-8 w-1 h-1 bg-cyan-400 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

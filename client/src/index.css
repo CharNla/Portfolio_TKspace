@@ -242,41 +242,54 @@
   }
 }
 
-/* Orbital Animation Keyframes */
-@keyframes orbit-purple {
+/* Premium Space Profile Animations */
+@keyframes spin-slow {
   from {
-    transform: rotate(0deg) translateX(200px) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes orbit-blue {
-  from {
-    transform: rotate(0deg) translateX(200px) rotate(0deg);
+@keyframes scan {
+  0% {
+    top: -2px;
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
   }
 }
 
-@keyframes orbit-pink {
-  from {
-    transform: rotate(0deg) translateX(160px) rotate(0deg);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
   }
-  to {
-    transform: rotate(-360deg) translateX(160px) rotate(360deg);
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
   }
 }
 
-@keyframes orbit-cyan {
-  from {
-    transform: rotate(0deg) translateX(80px) rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg) translateX(80px) rotate(360deg);
-  }
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-scan {
+  animation: scan 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
 @keyframes pulse-glow {
