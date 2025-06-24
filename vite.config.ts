@@ -4,7 +4,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  base: "/Portfolio_TKspace/",
+  base: process.env.NODE_ENV === "production" ? "/Portfolio_TKspace/" : "/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
