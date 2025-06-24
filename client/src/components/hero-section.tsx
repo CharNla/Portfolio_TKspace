@@ -133,14 +133,28 @@ export default function HeroSection() {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 border border-dashed border-purple-500/20 rounded-full"
-                  style={{ width: '400px', height: '400px', left: '-60px', top: '-60px' }}
+                  className="absolute border border-dashed border-purple-500/20 rounded-full"
+                  style={{ 
+                    width: '400px', 
+                    height: '400px', 
+                    left: '50%', 
+                    top: '50%',
+                    marginLeft: '-200px',
+                    marginTop: '-200px'
+                  }}
                 />
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 border border-dashed border-pink-500/20 rounded-full"
-                  style={{ width: '320px', height: '320px', left: '-20px', top: '-20px' }}
+                  className="absolute border border-dashed border-pink-500/20 rounded-full"
+                  style={{ 
+                    width: '320px', 
+                    height: '320px', 
+                    left: '50%', 
+                    top: '50%',
+                    marginLeft: '-160px',
+                    marginTop: '-160px'
+                  }}
                 />
               </div>
             </div>
